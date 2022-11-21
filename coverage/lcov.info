@@ -1,0 +1,77 @@
+TN:
+SF:src\controllers\register-vehicle.ts
+FN:1,RegisterVehicle
+FN:2,RegisterVehicle.handle
+FNF:2
+FNH:2
+FNDA:2,RegisterVehicle
+FNDA:2,RegisterVehicle.handle
+DA:1,2
+DA:2,2
+DA:3,2
+DA:4,1
+DA:5,1
+DA:6,1
+DA:7,1
+DA:8,1
+DA:9,1
+DA:10,1
+DA:11,1
+DA:12,1
+DA:13,1
+DA:14,1
+DA:15,1
+DA:16,2
+DA:17,2
+LF:17
+LH:17
+BRDA:1,0,0,2
+BRDA:2,1,0,2
+BRDA:3,2,0,1
+BRF:3
+BRH:3
+end_of_record
+TN:
+SF:src\models\Vehicle.ts
+FN:6,VehicleModel
+FN:12,get name
+FN:16,get model
+FN:20,get year
+FNF:4
+FNH:4
+FNDA:1,VehicleModel
+FNDA:1,get name
+FNDA:1,get model
+FNDA:1,get year
+DA:1,1
+DA:2,1
+DA:3,1
+DA:4,1
+DA:5,1
+DA:6,1
+DA:7,1
+DA:8,1
+DA:9,1
+DA:10,1
+DA:11,1
+DA:12,1
+DA:13,1
+DA:14,1
+DA:15,1
+DA:16,1
+DA:17,1
+DA:18,1
+DA:19,1
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+LF:23
+LH:23
+BRDA:6,0,0,1
+BRDA:12,1,0,1
+BRDA:16,2,0,1
+BRDA:20,3,0,1
+BRF:4
+BRH:4
+end_of_record
