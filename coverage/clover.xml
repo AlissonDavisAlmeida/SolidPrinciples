@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669040292918" clover="3.2.0">
-  <project timestamp="1669040292918" name="All files">
-    <metrics statements="40" coveredstatements="40" conditionals="7" coveredconditionals="7" methods="6" coveredmethods="6" elements="53" coveredelements="53" complexity="0" loc="40" ncloc="40" packages="2" files="2" classes="2"/>
+<coverage generated="1669315580502" clover="3.2.0">
+  <project timestamp="1669315580502" name="All files">
+    <metrics statements="59" coveredstatements="59" conditionals="11" coveredconditionals="11" methods="10" coveredmethods="10" elements="80" coveredelements="80" complexity="0" loc="59" ncloc="59" packages="2" files="3" classes="3"/>
     <package name="controllers">
       <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="register-vehicle.ts" path="C:\Users\aliss\Desktop\Alisson\autodidata\src\controllers\register-vehicle.ts">
@@ -26,7 +26,29 @@
       </file>
     </package>
     <package name="models">
-      <metrics statements="23" coveredstatements="23" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <metrics statements="42" coveredstatements="42" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8"/>
+      <file name="Food.ts" path="C:\Users\aliss\Desktop\Alisson\autodidata\src\models\Food.ts">
+        <metrics statements="19" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
       <file name="Vehicle.ts" path="C:\Users\aliss\Desktop\Alisson\autodidata\src\models\Vehicle.ts">
         <metrics statements="23" coveredstatements="23" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
