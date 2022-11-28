@@ -1,3 +1,4 @@
+import { MissingFormalParameter } from './../errors/client-error';
 import { RegisterVehicle } from '../controllers/register-vehicle';
 
 describe('Register Vehicles tests', () => {
@@ -16,7 +17,7 @@ describe('Register Vehicles tests', () => {
     const httpResponse = stu.handle(httpRequest);
 
     expect(httpResponse.statusCode).toBe(400);
-    expect(httpResponse.body).toStrictEqual(new Error('Missing param: name'));
+    expect(httpResponse.body).toStrictEqual(new MissingFormalParameter('name'));
   });
 
   test('if the model field does not exist, return 400', async () => {
@@ -34,7 +35,7 @@ describe('Register Vehicles tests', () => {
     const httpResponse = stu.handle(httpRequest);
 
     expect(httpResponse.statusCode).toBe(400);
-    expect(httpResponse.body).toStrictEqual(new Error('Missing param: model'));
+    expect(httpResponse.body).toStrictEqual(new MissingFormalParameter('model'));
   });
 
   test('if the year field does not exist, return 400', async () => {
@@ -52,7 +53,7 @@ describe('Register Vehicles tests', () => {
     const httpResponse = stu.handle(httpRequest);
 
     expect(httpResponse.statusCode).toBe(400);
-    expect(httpResponse.body).toStrictEqual(new Error('Missing param: year'));
+    expect(httpResponse.body).toStrictEqual(new MissingFormalParameter('year'));
   });
 
   test('if the color field does not exist, return 400', async () => {
@@ -70,7 +71,7 @@ describe('Register Vehicles tests', () => {
     const httpResponse = stu.handle(httpRequest);
 
     expect(httpResponse.statusCode).toBe(400);
-    expect(httpResponse.body).toStrictEqual(new Error('Missing param: color'));
+    expect(httpResponse.body).toStrictEqual(new MissingFormalParameter('color'));
   });
 
   test('if all fields exist, return 200', async () => {
