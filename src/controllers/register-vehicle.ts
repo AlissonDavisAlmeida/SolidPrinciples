@@ -1,17 +1,21 @@
+import { HttpResponse, HttpRequest } from './../interfaces/http-interface';
+
 export class RegisterVehicle {
-  handle = (httpRequest: any): any => {
-    if (!httpRequest.body.name) {
-      return {
-        statusCode: 400,
-        body: new Error('Missing param: name')
-      };
+  handle = (httpRequest: HttpRequest): HttpResponse => {
+    const requireFields = ['name', 'model', 'year', 'color'];
+
+    for (const field of requireFields) {
+      if (!httpRequest.body[field]) {
+        return {
+          statusCode: 400,
+          body: new Error(`Missing param: ${field}`)
+        };
+      }
     }
 
-    if (!httpRequest.body.model) {
-      return {
-        statusCode: 400,
-        body: new Error('Missing param: model')
-      };
-    }
+    return {
+      statusCode: 200,
+      body: 'ok'
+    };
   };
 }

@@ -8,7 +8,8 @@ describe('Register Vehicles tests', () => {
       body: {
         // name: 'Nissan',
         model: 'Versa',
-        year: 2019
+        year: 2019,
+        color: 'Black'
       }
     };
 
@@ -24,6 +25,7 @@ describe('Register Vehicles tests', () => {
     const httpRequest = {
       body: {
         name: 'Nissan',
+        color: 'Black',
         // model: 'Versa',
         year: 2019
       }
@@ -33,5 +35,59 @@ describe('Register Vehicles tests', () => {
 
     expect(httpResponse.statusCode).toBe(400);
     expect(httpResponse.body).toStrictEqual(new Error('Missing param: model'));
+  });
+
+  test('if the year field does not exist, return 400', async () => {
+    const stu = new RegisterVehicle();
+
+    const httpRequest = {
+      body: {
+        name: 'Nissan',
+        model: 'Versa',
+        color: 'blue'
+        // year: 2019
+      }
+    };
+
+    const httpResponse = stu.handle(httpRequest);
+
+    expect(httpResponse.statusCode).toBe(400);
+    expect(httpResponse.body).toStrictEqual(new Error('Missing param: year'));
+  });
+
+  test('if the color field does not exist, return 400', async () => {
+    const stu = new RegisterVehicle();
+
+    const httpRequest = {
+      body: {
+        name: 'Nissan',
+        model: 'Versa',
+        year: 2019
+        // color: red
+      }
+    };
+
+    const httpResponse = stu.handle(httpRequest);
+
+    expect(httpResponse.statusCode).toBe(400);
+    expect(httpResponse.body).toStrictEqual(new Error('Missing param: color'));
+  });
+
+  test('if all fields exist, return 200', async () => {
+    const stu = new RegisterVehicle();
+
+    const httpRequest = {
+      body: {
+        name: 'Nissan',
+        model: 'Versa',
+        year: 2019,
+        color: 'red'
+      }
+    };
+
+    const httpResponse = stu.handle(httpRequest);
+
+    expect(httpResponse.statusCode).toBe(200);
+    expect(httpResponse.body).toStrictEqual('ok');
   });
 });
