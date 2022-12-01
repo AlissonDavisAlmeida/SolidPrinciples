@@ -1,3 +1,4 @@
+import { VehicleHelper } from './../helpers/vehicle-model.helper';
 import { VehicleModel } from '../models/Vehicle';
 
 describe('Vehicle Model tests', () => {
@@ -14,5 +15,16 @@ describe('Vehicle Model tests', () => {
     expect(vehicleModel.model).toEqual('Versa');
     expect(vehicleModel.year).toEqual(2019);
     expect(vehicleModel.price).toEqual(25);
+  });
+
+  it('Vehicle Helper', () => {
+    const vehicleHelper = new VehicleHelper(
+      'Nissan',
+      'Versa',
+      2019,
+      25
+    );
+
+    expect(vehicleHelper).toBeDefined();
   });
 });

@@ -23,6 +23,10 @@ export default {
 
   coverageProvider: 'v8',
 
-  testEnvironment: 'node'
+  testEnvironment: 'node',
+
+  modulePathIgnorePatterns: [
+    '<rootDir>/src/interfaces/'
+  ]
 
 };
